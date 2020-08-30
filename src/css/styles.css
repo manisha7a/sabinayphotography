@@ -1,0 +1,67 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px; }
+
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px; }
+
+.footer {
+  background-color: #292620;
+  color: #fafeff;
+  margin: 0px auto;
+  padding: 20px 20px; }
+
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+  background-color: #fafeff; }
+
+.navbar-light {
+  background-color: #fafeff; }
+
+.carousel .carousel-item img {
+  margin: 0 auto; 
+}
+
+.modal-header {
+  background: #292620;
+  border-bottom: 0px; }
+  .modal-header .modal-title, .modal-header .close {
+    color: #fafeff; }
+
+.myWorkImage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden; }
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; }
+
+.myWorkContainer:hover .middle {
+  opacity: 1; }
+
+.myWorkContainer:hover .myWorkImage {
+  opacity: 0.3; }
+
+a:hover {
+  color: #292620; }
+
+.navbar .nav-item .dropdown-menu, .navbar .nav-item .dropdown-item {
+  background-color: #292620;
+  color: #fafeff; }
+  .navbar .nav-item .dropdown-menu:hover, .navbar .nav-item .dropdown-item:hover {
+    background-color: #292620;
+    color: #9b9b9c; }
