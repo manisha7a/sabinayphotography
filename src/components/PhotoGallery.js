@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import './PhotoGallery.css';
 
 const PhotoGallery = ( {images} ) => {
@@ -13,10 +13,7 @@ const PhotoGallery = ( {images} ) => {
     return(
         <div>
             <Row className="text-center text-lg-left">{gallery}</Row>
-            <Container>
-                <span onclick="this.parentElement.style.display='none'" className="closebtn">&times;</span>
-                <img className="expandedImg" style= {{width:'100%'}} />
-            </Container>
+           
         </div>
     );
 };

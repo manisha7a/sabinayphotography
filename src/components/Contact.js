@@ -1,18 +1,22 @@
 import React from 'react';
-import { Row, Col, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+
+import ContactUsForm from './ContactUsForm';
 
 const Contact = () => {
     return(
-        <div>
-            <Row>
+        <Container fluid>
+            <Breadcrumb>
+                <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
+                <BreadcrumbItem active>Contact</BreadcrumbItem>
+            </Breadcrumb>
+            <Row className="row-content">
                 <Col>
-                    <Breadcrumb>
-                        <BreadcrumbItem><a href="/">Home</a></BreadcrumbItem>
-                        <BreadcrumbItem active>About</BreadcrumbItem>
-                    </Breadcrumb>
+                    <ContactUsForm />
                 </Col>
             </Row>
-        </div>
+        </Container>
     );
 };
 

@@ -21,8 +21,8 @@ const Header = () => {
     const toggleNavbar = () => setCollapsed(!collapsed);
 
     return(
-       <Container fluid>
-            <Navbar light expand="sm fixed-top" className="nav">
+       <Container fluid className="headercontainer">
+            <Navbar light expand="sm" className="headernav fixed-top">
                 <NavbarBrand href="/"><img src="/img/photologo.png" alt="Logo" height="20" className="mr-auto"/></NavbarBrand>
                 <NavbarToggler onClick={toggleNavbar} />
                 <Collapse isOpen={!collapsed} navbar>

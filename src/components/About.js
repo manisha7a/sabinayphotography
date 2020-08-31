@@ -1,18 +1,14 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { Container, Row, Col, Card } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col, Breadcrumb, BreadcrumbItem, Card } from 'reactstrap';
 
 const About = () => {
     return(
         <Container fluid>
-            <Row>
-                <Col>
-                    <Breadcrumb>
-                        <BreadcrumbItem><a href="/">Home</a></BreadcrumbItem>
-                        <BreadcrumbItem active>About</BreadcrumbItem>
-                    </Breadcrumb>
-                </Col>
-            </Row>
+            <Breadcrumb>
+                <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
+                <BreadcrumbItem active>About</BreadcrumbItem>
+            </Breadcrumb>
             <Row className="row-content">
                 <Col>
                     <Row className="align-items-start">

@@ -1,7 +1,11 @@
-.nav {
+.headernav {
     background-color: #fafeff; }
 
 .link:hover {
         border-bottom: 4px solid rgb(194, 191, 191);
         transition: all 0.2s ease-out;
     }
+
+.headercontainer {
+    margin-bottom: 70px;
+}
