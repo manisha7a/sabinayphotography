@@ -12,7 +12,8 @@ import { Container,
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+
+import GoogleAuth from './GoogleAuth';
 import './Header.css';
 
 const Header = () => {
@@ -45,7 +46,9 @@ const Header = () => {
                             <NavLink className="link" href="/contact">CONTACT</NavLink>
                         </NavItem>
                     </Nav>
-                    <Link to="/">SIGN IN</Link>
+                    <div>
+                        <GoogleAuth />
+                    </div>
                 </Collapse>        
             </Navbar>
        </Container>
