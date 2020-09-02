@@ -10,6 +10,7 @@ import MaternityShoot from './services/MaternityShoot';
 import StudioShoot from './services/StudioShoot';
 import Header from './Header';
 import Footer from './Footer';
+import Dashboard from './tshirt/Dashboard';
 
 const App = () => {
     return(
@@ -24,6 +25,7 @@ const App = () => {
                         <Route exact path="/services/function" component={Function}/>
                         <Route exact path="/services/maternityshoot" component={MaternityShoot}/>
                         <Route exact path="/services/studioshoot" component={StudioShoot}/>
+                        <Route exact path="/tshirt/dashboard" component={Dashboard}/>
                     </Switch>
                     <Footer />
                 </div>
