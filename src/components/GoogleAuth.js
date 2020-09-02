@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'reactstrap';
+import { UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
+
 import { signIn, signOut } from '../actions'
 
 const GoogleAuth = ({ isSignedIn,signIn,signOut }) => {
@@ -8,6 +10,7 @@ const GoogleAuth = ({ isSignedIn,signIn,signOut }) => {
 
      const onLogInClick = () => {
          auth.signIn();
+         console.log(auth);
      }
     
      const onLogOutClick = () => {
@@ -19,15 +22,32 @@ const GoogleAuth = ({ isSignedIn,signIn,signOut }) => {
             return null;
         } else if (isSignedIn){
             return(
-            <Button color="primary" onClick={onLogOutClick}>
-                <i className="fa fa-google"/> Sign Out 
-            </Button>
+            <UncontrolledButtonDropdown>
+                <DropdownToggle caret>
+                  <i className="fa fa-user-circle" />
+                </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem onClick={onLogOutClick}>
+                        <i className="fa fa-google"/> Sign Out 
+                    </DropdownItem>
+                    <DropdownItem><Link to="/account">Account</Link></DropdownItem>
+                    <DropdownItem><Link to="/tshirt/projects">My Projects</Link></DropdownItem>
+                </DropdownMenu>
+              </UncontrolledButtonDropdown>
+
             );
         } else {
             return(
-            <Button color="primary" onClick={onLogInClick}>
-                <i className="fa fa-google"/> Sign In with Google
-            </Button>
+                <UncontrolledButtonDropdown>
+                <DropdownToggle caret>
+                  <i className="fa fa-user-circle" />
+                </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem onClick={onLogInClick}>
+                        <i className="fa fa-google"/> Sign In
+                    </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledButtonDropdown>
             );
         }
     }

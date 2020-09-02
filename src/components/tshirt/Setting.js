@@ -6,6 +6,7 @@ import SettingsForm from './SettingsForm';
 const URLIMG = 'https://res.cloudinary.com/dkkgmzpqd/image/upload/v1545217305/T-shirt%20Images/';
 
 const Setting = ({ setColor }) => {
+
     return(
         <Card className="bg-light">
             <CardHeader tag="h3" className="text-center">Settings</CardHeader>
@@ -19,7 +20,7 @@ const Setting = ({ setColor }) => {
                 </Row>
             </CardBody>
             <CardBody>
-                <SettingsForm/>
+                <SettingsForm />
             </CardBody>
         </Card>
     );

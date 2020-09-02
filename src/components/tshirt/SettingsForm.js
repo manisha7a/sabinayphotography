@@ -1,6 +1,9 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Col, Form, FormGroup, Label, Button } from 'reactstrap';
+import { connect } from 'react-redux';
+
+import { saveDesign } from '../../actions';
 
 const colors = ['White', 'Black', 'Grey', 'Blue']
 
@@ -37,17 +40,16 @@ const renderInput = ({ input, label, placeholder, type, min, max, value }) => (
     </FormGroup>
 )
 
-const DisplayForm = ({ handleSubmit, mimeType}) => {
+const DisplayForm = ({ handleSubmit, onFormSubmit, saveDesign, handleImageUpload }) => {
+
     const onSubmit = formValues => {
-        alert(formValues);
+        saveDesign(formValues);
     }
     
     return(
         <Form onSubmit={handleSubmit(onSubmit)}>
-            <Field name="aboveImageTxt" component={renderInput} type="text" label="Write Text" placeholder="Above image"/>
-            <Field name="belowImageTxt" component={renderInput} type="text" placeholder="Below image"/>
-            <Field name="uploadImg" component={renderInput} label="Upload Image" type="file" mimeType={mimeType}/>
-            <Field name="textSize" component={renderInput} label="Text Size" type="range" min="0" max="100"/>
+            <Field name="printText" component={renderInput} type="text" label="Write Text" placeholder="Text"/>
+            <Field name="textSize" component={renderInput} label="Text Size" type="range" min="10" max="100"/>
             <Field name="textColor" component={renderSelect} label="Text Color" />
             <FormGroup row>
                 <Col>
@@ -58,6 +60,8 @@ const DisplayForm = ({ handleSubmit, mimeType}) => {
     );
 }
 
+const DisplayFormConnect = connect(null, { saveDesign })(DisplayForm)
+
 export default reduxForm({
     form:'displayForm'
-}) (DisplayForm);
+}) (DisplayFormConnect);

@@ -11,6 +11,8 @@ import StudioShoot from './services/StudioShoot';
 import Header from './Header';
 import Footer from './Footer';
 import Dashboard from './tshirt/Dashboard';
+import Projects from './tshirt/Projects';
+import Account from './Account';
 
 const App = () => {
     return(
@@ -26,6 +28,8 @@ const App = () => {
                         <Route exact path="/services/maternityshoot" component={MaternityShoot}/>
                         <Route exact path="/services/studioshoot" component={StudioShoot}/>
                         <Route exact path="/tshirt/dashboard" component={Dashboard}/>
+                        <Route exact path="/tshirt/projects" component={Projects}/>
+                        <Route exact path="/account" component={Account}/>
                     </Switch>
                     <Footer />
                 </div>

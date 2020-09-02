@@ -40,6 +40,7 @@ const Header = () => {
                                 <DropdownItem href="/services/studioshoot">Studio Shoot</DropdownItem>
                                 <DropdownItem href="/services/maternityshoot">Maternity Shoot</DropdownItem>
                                 <DropdownItem href="/services/function">Functions</DropdownItem>
+                                <DropdownItem href="/tshirt/Dashboard">T-Shirt Print</DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown >
                         <NavItem>

@@ -5,7 +5,7 @@ import './Footer.css';
 
 const Footer = () => {
     return(
-        <Container fluid className="footer">
+        <Container fluid className="footer mt-2">
             <Row>
                 <Col xs="8" sm="8">
                     <h5>Our Address</h5>
