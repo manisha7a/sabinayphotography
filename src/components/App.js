@@ -27,8 +27,8 @@ const App = () => {
                         <Route exact path="/services/function" component={Function}/>
                         <Route exact path="/services/maternityshoot" component={MaternityShoot}/>
                         <Route exact path="/services/studioshoot" component={StudioShoot}/>
-                        <Route exact path="/tshirtapp/dashboard" component={Dashboard}/>
-                        <Route exact path="/tshirtapp/projects" component={Projects}/>
+                        <Route exact path="/tshirt/dashboard" component={Dashboard}/>
+                        <Route exact path="/tshirt/projects" component={Projects}/>
                         <Route exact path="/account" component={Account}/>
                     </Switch>
                     <Footer />
