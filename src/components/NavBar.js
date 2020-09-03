@@ -14,7 +14,7 @@ import { Container,
 } from 'reactstrap';
 
 import GoogleAuth from './GoogleAuth';
-import './Header.css';
+import '../css/NavBar.css';
 
 const Header = () => {
     const [collapsed, setCollapsed] = useState(true);

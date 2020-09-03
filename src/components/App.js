@@ -8,10 +8,10 @@ import Contact from './Contact';
 import Function from './services/Function';
 import MaternityShoot from './services/MaternityShoot';
 import StudioShoot from './services/StudioShoot';
-import Header from './Header';
+import NavBar from './NavBar';
 import Footer from './Footer';
-import Dashboard from './tshirt/Dashboard';
-import Projects from './tshirt/Projects';
+import Dashboard from './tshirtApp/Dashboard';
+import Projects from './tshirtApp/Projects';
 import Account from './Account';
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         <div>
             <Router history={history}>
                 <div>
-                    <Header />
+                    <NavBar />
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route exact path="/about" component={About}/>
@@ -27,8 +27,8 @@ const App = () => {
                         <Route exact path="/services/function" component={Function}/>
                         <Route exact path="/services/maternityshoot" component={MaternityShoot}/>
                         <Route exact path="/services/studioshoot" component={StudioShoot}/>
-                        <Route exact path="/tshirt/dashboard" component={Dashboard}/>
-                        <Route exact path="/tshirt/projects" component={Projects}/>
+                        <Route exact path="/tshirtapp/dashboard" component={Dashboard}/>
+                        <Route exact path="/tshirtapp/projects" component={Projects}/>
                         <Route exact path="/account" component={Account}/>
                     </Switch>
                     <Footer />

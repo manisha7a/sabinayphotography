@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-import './PhotoGallery.css';
+import '../css/PhotoGallery.css';
 
 const PhotoGallery = ( {images} ) => {
    const gallery = images.map(image => {

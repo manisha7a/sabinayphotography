@@ -9,7 +9,7 @@ import {
     CarouselIndicators,
   } from 'reactstrap';
 
-  import './ImageCarousel.css';
+  import '../css/ImageCarousel.css';
 
 const ImageCarousel = ( { items}) => {
 
